@@ -40,7 +40,7 @@ export default function ChatWidget() {
                 key={i}
                 className={
                   m.from === 'user'
-                    ? 'text-right'
+                    ? 'text-right text-black'
                     : 'text-left text-indigo-600'
                 }>
                 {m.text}
