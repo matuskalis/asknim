@@ -40,7 +40,7 @@ export default function ChatWidget() {
                 key={i}
                 className={
                   m.from === 'user'
-                    ? 'text-right text-black'
+                    ? 'text-right !text-gray-900'
                     : 'text-left text-indigo-600'
                 }>
                 {m.text}
@@ -50,13 +50,14 @@ export default function ChatWidget() {
 
           {/* input row */}
           <div className="p-2 border-t flex">
-            <input
-              className="flex-1 border px-2 py-1 rounded"
-              value={input}
-              onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && send()}
-              placeholder="Ask Nim…"
-            />
+          <input
+            className="flex-1 border px-2 py-1 rounded text-gray-900"
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && send()}
+            placeholder="Ask Nim…"
+          />
+
             <button
               onClick={send}
               className="ml-2 bg-indigo-600 text-white px-3 rounded">
