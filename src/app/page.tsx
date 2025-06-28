@@ -1,7 +1,22 @@
 import ChatWidget from '@/components/ChatWidget';
 import Image from "next/image";
 
+const COMING_SOON = true; // Toggle this to false when ready to launch the bot
+
 export default function Home() {
+  if (COMING_SOON) {
+    return (
+      <main className="flex items-center justify-center min-h-screen bg-gray-950 text-white px-4">
+        <div className="text-center">
+          <h1 className="text-5xl font-extrabold mb-4">AskNim</h1>
+          <p className="text-xl mb-6 text-gray-300">Your AI Chat Assistant is coming soon.</p>
+          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-gray-400 mx-auto mb-4"></div>
+          <p className="text-sm text-gray-500">Stay tuned for the launch.</p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -51,7 +66,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <ChatWidget />   {/* ← Nim bubble */}
+        <ChatWidget />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
