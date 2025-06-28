@@ -6,16 +6,18 @@ const COMING_SOON = true; // Toggle this to false when ready to launch the bot
 export default function Home() {
   if (COMING_SOON) {
     return (
-      <main>
-        <h1>AskNim</h1>
-        <p>Your AI Chat Assistant is coming soon.</p>
-        {/* Show the assistant even while coming soon */}
-        <div style={{ marginTop: 40 }}>
+      <main className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+        <h1 className="text-5xl sm:text-6xl font-bold mb-4">AskNim</h1>
+        <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400">
+          Your AI Chat Assistant is coming soon.
+        </p>
+        <div className="mt-10">
           <ChatWidget />
         </div>
       </main>
     );
   }
+  
   
 
   return (
